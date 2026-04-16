@@ -7,3 +7,49 @@ firewall-cmd --add-port=7946/udp --permanent
 firewall-cmd --add-port=4789/tcp --permanent
 firewall-cmd --add-port=4789/udp --permanent
 firewall-cmd --reload
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+docker swarm row notes,
+
+docker swarm init --advertise-addr 192.168.43.135 = it will provide a node token which you have to run on node servier
+
+    docker swarm join --token SWMTKN-1-5p51j1itb24jvcprhrdw5iofzvrki47rqgtjm1ei0nld6infff-chhrsdgctkpbnik7l97fmnrft 192.168.43.135:2377
+
+  
+allow some ports to firewall, in both servers manager and node ,also the image should available in boths.
+firewall-cmd --add-port=2377/tcp --permanent
+firewall-cmd --add-port=7946/tcp --permanent
+firewall-cmd --add-port=7946/udp --permanent
+firewall-cmd --add-port=4789/tcp --permanent
+firewall-cmd --add-port=4789/udp --permanent
+firewall-cmd --reload
+
+then create service , 
+docker create service --name app -p 1002:80 aarushtechnologies/app:latest
+
+docker service ls = to list all servicess , here your service should present
+open both servers browser with thire own ips with the same port you given, here  is your site live on diff servers with thire own ip 
+
+for leaveing swarm ,
+docker swarm leave --force 
+
+to delete service ,
+docker service remove
+to listall service ,
+docker service ls
+
+to get service info,
+docker service ps <sservice.name>
+
+to list node
+docker node ls
+
+to promote an node
+docker node promote <node-id>
+to demote an node , 
+docker node demote <node-id>
+
+

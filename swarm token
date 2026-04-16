@@ -1,1 +1,9 @@
     docker swarm join --token SWMTKN-1-3pq787pvpp92x9gj4p05h0o6k08lm05xycy9xge7xdazmkhhs6-2bly76f13e1ah2w9cagon89ad 192.168.1.8:2377
+
+
+firewall-cmd --add-port=2377/tcp --permanent
+firewall-cmd --add-port=7946/tcp --permanent
+firewall-cmd --add-port=7946/udp --permanent
+firewall-cmd --add-port=4789/tcp --permanent
+firewall-cmd --add-port=4789/udp --permanent
+firewall-cmd --reload

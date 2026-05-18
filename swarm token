@@ -27,7 +27,7 @@ firewall-cmd --add-port=4789/udp --permanent
 firewall-cmd --reload
 
 then create service , 
-docker create service --name app -p 1002:80 aarushtechnologies/app:latest
+docker service create --name app -p 1002:80 aarushtechnologies/app:latest
 
 docker service ls = to list all servicess , here your service should present
 open both servers browser with thire own ips with the same port you given, here  is your site live on diff servers with thire own ip 

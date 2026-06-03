@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal's DevOps Project</title>
+    <title>Vishal's Java Application</title>
 
 ```
 <style>
@@ -24,30 +24,16 @@
         border-radius: 15px;
         text-align: center;
         box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        max-width: 700px;
     }
 
     h1 {
         color: #232F3E;
-        margin-bottom: 15px;
     }
 
     p {
         color: #555;
         font-size: 18px;
         line-height: 1.6;
-    }
-
-    .footer {
-        margin-top: 25px;
-        color: #444;
-        font-size: 16px;
-        line-height: 1.8;
-    }
-
-    .highlight {
-        color: #FF9900;
-        font-weight: bold;
     }
 </style>
 ```
@@ -57,29 +43,19 @@
 
 ```
 <div class="container">
-    <h1>🚀 Java CI/CD Pipeline on AWS</h1>
+    <h1>Hello, I'm Vishal 👋</h1>
 
     <p>
-        Successfully built and deployed a Java Web Application using a complete
-        DevOps workflow on AWS Cloud.
+        This Java application is deployed on AWS using Apache Tomcat.
     </p>
 
-    <p class="highlight">
-        GitHub ➜ Jenkins ➜ Maven ➜ Nexus ➜ Tomcat
+    <p>
+        Jenkins and Tomcat are running on one EC2 instance, while Nexus Repository Manager is running on a separate EC2 instance.
     </p>
 
-    <div class="footer">
-        👨‍💻 Developed by Vishal<br><br>
-
-        ☁️ AWS EC2 Instance 1: Jenkins + Apache Tomcat<br>
-        📦 AWS EC2 Instance 2: Nexus Repository Manager<br>
-        🔗 Source Code Management using GitHub<br>
-        ⚙️ Build Automation using Maven<br>
-        📁 Artifact Storage using Nexus Repository<br>
-        🚀 Continuous Integration & Deployment with Jenkins<br><br>
-
-        This project demonstrates a real-world DevOps CI/CD pipeline.
-    </div>
+    <p>
+        A simple DevOps CI/CD project using GitHub, Maven, Jenkins, Nexus, and Tomcat 🚀
+    </p>
 </div>
 ```
 
